@@ -34,6 +34,11 @@ function makeUL(array){
     let item = document.createElement("p");
     let checkbox = document.createElement('input');
     checkbox.setAttribute('type', 'checkbox');
+    checkbox.addEventListener('change', function(){
+      if(this.checked) {
+        console.log('Checkbox');
+      }
+    })
     item.appendChild(checkbox);
     //set items contents to array[i]
     let text = document.createTextNode(array[i]);
@@ -49,9 +54,8 @@ function makeUL(array){
 }
 
 
-function clickBox(){
-  let item = document.getElementById("").value;
-  array.push(listItem);
-  console.log(array)
-  makeUL(array);
-}
+// function clickBox(){
+//  console.log(0);
+// }
+
+// document.querySelectorAll('input[type= checkbox]').forEach(input => input.addEventListerner('click', clickBox()))
