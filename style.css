@@ -1,3 +1,52 @@
 h1 {
     color:purple
 }
+
+body {
+    background-color:lightblue
+}
+
+header {
+    background-color:rgb(75, 127, 205);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-style: solid;
+}
+
+#addList {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    
+}
+
+#theItems {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+   margin-bottom: 20px;
+   display:flex;
+}
+
+footer {
+    background-color:rgb(75, 127, 205);
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    border-style: solid;
+
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+}
+
+button {
+    margin: 10px;
+}
