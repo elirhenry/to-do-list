@@ -1,9 +1,43 @@
-console.log("My code is running!")
+let array = [];
 
+let listContainer = document.querySelector('#theItems')
 
-var list = [item1, item2, item3]
-// Users should be able to view all of the to-do tasks
-// Users should be able to add a to-do to the list of to-do tasks
-// Users should be able to mark a task as completed by crossing it out on click
-// Users should be able to remove to-do tasks by removing those elements from the DOM
-// The page should be aesthetically pleasing (aka be styled)
+/* function clickFunct(){
+    let orderedListElement = document.querySelector('theItem')
+    let listItem = document.getElementById("list").value;
+    array.push(listItem);
+    
+    for(let i=0;i < array.length; i++){
+      let listElement = document.createElement("li")
+      listElement.appendChild(listItem[i])
+      orderedListElement.
+    
+    }   
+    //console.log(array)
+} */
+
+//let listItem = document.getElementById("list").addEventListener("click", () => array.push(listItem))//add listItem to array
+	//listContainer.appendChild(document.createTextNode(array[i]))
+function clickFunct(){
+    let listItem = document.getElementById("list").value;
+    array.push(listItem);
+    console.log(array)
+    makeUL(array);
+}
+
+function makeUL(array){
+// create the unordered list element
+	let division = document.getElementById("theItems");
+  var list = document.createElement("ul");
+  for(let i=0;i < array.length; i++){
+  //create list item
+    let item = document.createElement("li");
+    //set items contents to array[i]
+    let X = document.createTextNode(array[i]);
+    item.appendChild(X);
+    //add it to the list
+    list.appendChild(item);
+    division.innerHTML = array[i];
+  }
+  return list;
+}
